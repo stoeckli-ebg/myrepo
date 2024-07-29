@@ -21,3 +21,17 @@ if (rtools_path != "") {
 } else {
   cat("RTools is not detected.\n")
 }
+
+# Download devtools
+install.packages("devtools")
+library(devtools)
+
+# Install logib package
+devtools::install_github("https://github.com/admin-ebg/logib")
+devtools::install_github("https://github.com/admin-ebg/logib", ref = "dev")
+
+# Test logib package
+library(logib)
+summary(analysis(data = datalist_example, reference_month = 1,
+         reference_year = 2019, usual_weekly_hours = 40, female_spec = 2,
+         male_spec = 1))
