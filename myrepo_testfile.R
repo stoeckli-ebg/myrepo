@@ -23,6 +23,7 @@ if (rtools_path != "") {
 }
 
 # Download devtools
+.libPaths("C:/Programm Files/R/R-4.1.2/library")
 install.packages("devtools")
 library(devtools)
 
